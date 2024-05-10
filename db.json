@@ -1,0 +1,70 @@
+{
+  "apartments": [
+    {
+      "id": "1",
+      "name": "Apartment 1",
+      "type": "Apartment",
+      "price": "450000",
+      "town": "Poznań",
+      "country": "Poland",
+      "square": 29,
+      "preferences": ["good commute"],
+      "backgroundImage": "./apart.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Apartment 2",
+      "type": "Apartment",
+      "price": "500000",
+      "town": "Poznań",
+      "country": "Poland",
+      "square": 200,
+      "preferences": ["good commute", "active lifestyle"],
+      "backgroundImage": "./apart2.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Apartment 3",
+      "type": "Office",
+      "price": "500000",
+      "town": "Poznań",
+      "country": "Poland",
+      "square": 259,
+      "preferences": ["good commute"],
+      "backgroundImage": "./apart3.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Apartment 4",
+      "type": "Office",
+      "price": "1000000",
+      "town": "Warszawa",
+      "country": "Poland",
+      "square": 321,
+      "preferences": ["good commute"],
+      "backgroundImage": "./apart4.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Apartment 5",
+      "type": "Apartment",
+      "price": "1000000",
+      "town": "Warszawa",
+      "country": "Poland",
+      "square": 356,
+      "preferences": ["good commute"],
+      "backgroundImage": "./apart5.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Apartment 6",
+      "type": "Apartment",
+      "price": "1000000",
+      "town": "Warszawa",
+      "country": "Poland",
+      "square": 521,
+      "preferences": ["good commute", "pet friendly"],
+      "backgroundImage": "./apart6.jpg"
+    }
+  ]
+}

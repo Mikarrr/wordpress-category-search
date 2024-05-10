@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Real Estate</title>
+  </head>
+  <body>
+    <section class="real-estate-container">
+      <div class="left">
+        <h1>Properties for rent</h1>
+        <hr />
+        <div class="filter">
+          <div class="filter-col">
+            <label for="location">Location</label>
+            <input
+              id="location"
+              name="location"
+              autocomplete="off"
+              role="combobox"
+              list="locations"
+              placeholder="Select your town..."
+            />
+            <datalist id="locations">
+              <!-- Dynamicznie generowane opcje -->
+            </datalist>
+          </div>
+          <div class="filter-col">
+            <label for="property-type">Property type</label>
+            <select class="property-type" id="property-type">
+              <option value="All">All</option>
+              <!-- Dynamicznie generowane opcje -->
+            </select>
+          </div>
+          <div class="square-row">
+            <div class="filter-col">
+              <label for="min-square">Min Square </label>
+              <input
+                type="number"
+                class="min-square"
+                id="min-square"
+                placeholder="Min square"
+              />
+            </div>
+            <div class="filter-col">
+              <label for="max-square">Max Square</label>
+              <input
+                type="number"
+                class="max-square"
+                id="max-square"
+                placeholder="Max square"
+              />
+            </div>
+          </div>
+          <div class="price-row">
+            <div class="filter-col">
+              <label for="min-price">Min Price</label>
+              <input
+                type="number"
+                class="min-price"
+                id="min-price"
+                placeholder="Min Price"
+              />
+            </div>
+            <div class="filter-col">
+              <label for="max-price">Max Price</label>
+              <input
+                type="number"
+                class="max-price"
+                id="max-price"
+                placeholder="Max Price"
+              />
+            </div>
+          </div>
+        </div>
+        <button id="togglePreferences">
+          <svg
+            clip-rule="evenodd"
+            fill-rule="evenodd"
+            stroke-linejoin="round"
+            stroke-miterlimit="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m15.344 17.778c0-.414-.336-.75-.75-.75h-5.16c-.414 0-.75.336-.75.75s.336.75.75.75h5.16c.414 0 .75-.336.75-.75zm2.206-4c0-.414-.336-.75-.75-.75h-9.596c-.414 0-.75.336-.75.75s.336.75.75.75h9.596c.414 0 .75-.336.75-.75zm2.45-4c0-.414-.336-.75-.75-.75h-14.5c-.414 0-.75.336-.75.75s.336.75.75.75h14.5c.414 0 .75-.336.75-.75zm2-4c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75z"
+              fill-rule="nonzero"
+            /></svg
+          >Filters
+        </button>
+        <div class="preferences" id="preferencesSection">
+          <p>Preferences</p>
+          <div class="preferences-col">
+            <div class="pref-checkbox">
+              <input type="checkbox" id="good-commute" />
+              <label for="good-commute">Good commute</label>
+            </div>
+            <div class="pref-checkbox">
+              <input type="checkbox" id="active-lifestyle" />
+              <label for="active-lifestyle">Active lifestyle</label>
+            </div>
+            <div class="pref-checkbox">
+              <input type="checkbox" id="children-friendly" />
+              <label for="children-friendly">Children friendly</label>
+            </div>
+            <div class="pref-checkbox">
+              <input type="checkbox" id="pet-friendly" />
+              <label for="pet-friendly">Pet friendly</label>
+            </div>
+            <div class="pref-checkbox">
+              <input type="checkbox" id="furnished" />
+              <label for="furnished">Furnished</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="counter">
+          <div class="counter-left">
+            <p id="result-counter">Found 0 results</p>
+            <div class="sort-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4 14.083c0-2.145-2.232-2.742-3.943-3.546-1.039-.54-.908-1.829.581-1.916.826-.05 1.675.195 2.443.465l.362-1.647c-.907-.276-1.719-.402-2.443-.421v-1.018h-1v1.067c-1.945.267-2.984 1.487-2.984 2.85 0 2.438 2.847 2.81 3.778 3.243 1.27.568 1.035 1.75-.114 2.011-.997.226-2.269-.168-3.225-.54l-.455 1.644c.894.462 1.965.708 3 .727v.998h1v-1.053c1.657-.232 3.002-1.146 3-2.864z"
+                />
+              </svg>
+              <select class="sort">
+                <option value="highest_price">Highest Price</option>
+                <option value="lowest_price">Lowest Price</option>
+              </select>
+            </div>
+          </div>
+          <div class="view-change">
+            <button class="grid active">
+              <svg
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+                stroke-linejoin="round"
+                stroke-miterlimit="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m11.6 11c0-.552-.448-1-1-1-1.655 0-4.945 0-6.6 0-.552 0-1 .448-1 1v9c0 .552.448 1 1 1h6.6c.552 0 1-.448 1-1 0-2.092 0-6.908 0-9zm9.4 6c0-.552-.448-1-1-1h-6c-.538 0-1 .477-1 1v3c0 .552.448 1 1 1h6c.552 0 1-.448 1-1zm0-13c0-.552-.448-1-1-1-1.537 0-4.463 0-6 0-.552 0-1 .448-1 1v9.6c0 .552.448 1 1 1h6c.552 0 1-.448 1-1 0-2.194 0-7.406 0-9.6zm-9.4 0c0-.552-.448-1-1-1-1.655 0-4.945 0-6.6 0-.552 0-1 .448-1 1v3.6c0 .552.448 1 1 1h6.6c.552 0 1-.448 1-1 0-1.017 0-2.583 0-3.6z"
+                  fill-rule="nonzero"
+                />
+              </svg>
+            </button>
+            <button class="list">
+              <svg
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+                stroke-linejoin="round"
+                stroke-miterlimit="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m11.3 3h-7.3c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h7.3zm1.4 0v18h7.3c.478 0 1-.379 1-1v-16c0-.478-.379-1-1-1z"
+                  fill-rule="nonzero"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="apartments"></div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>

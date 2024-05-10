@@ -1,0 +1,22 @@
+{
+  "description": "Tutaj mo\u017cesz przegl\u0105da\u0107 produkty w sklepie.",
+  "hierarchical": false,
+  "has_archive": "sklep",
+  "name": "Produkty",
+  "slug": "product",
+  "icon": "dashicons-archive",
+  "taxonomies": ["product_cat", "product_tag"],
+  "rest_base": "product",
+  "rest_namespace": "wp/v2",
+  "_links": {
+    "collection": [
+      { "href": "http://localhost/wordpress/wp-json/wp/v2/types" }
+    ],
+    "wp:items": [
+      { "href": "http://localhost/wordpress/wp-json/wp/v2/product" }
+    ],
+    "curies": [
+      { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+    ]
+  }
+}
